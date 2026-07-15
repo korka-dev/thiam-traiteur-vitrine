@@ -25,6 +25,18 @@ export default function Footer() {
         <p className="text-xs text-cream/30">
           © {new Date().getFullYear()} Thiam Traiteur. Tous droits réservés.
         </p>
+
+        <p className="text-xs text-cream/30 border-t border-cream/10 pt-6 w-full text-center">
+          Site conçu et développé par{" "}
+          <a
+            href="https://www.groupegenetics.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold/80 hover:text-gold transition-colors"
+          >
+            Groupe Genetics
+          </a>
+        </p>
       </div>
     </footer>
   );
