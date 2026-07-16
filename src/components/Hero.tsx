@@ -55,7 +55,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/55 to-navy-dark/90" />
 
       <motion.div
-        className="relative mx-auto max-w-5xl px-6 py-24 sm:py-32 flex flex-col items-center text-center gap-8"
+        className="relative mx-auto max-w-5xl px-6 py-16 sm:py-32 flex flex-col items-center text-center gap-5 sm:gap-8"
         variants={container}
         initial="hidden"
         animate="show"
@@ -79,11 +79,16 @@ export default function Hero() {
           des collectivités
         </motion.h1>
 
-        <motion.p variants={item} className="max-w-xl text-cream/85 text-base sm:text-lg">
-          Depuis plus de 20 ans, Thiam Traiteur accompagne entreprises,
-          administrations, écoles et organisations dans leurs besoins de
-          restauration quotidienne, tout en sublimant vos mariages,
-          anniversaires et événements avec des mets raffinés.
+        <motion.p variants={item} className="max-w-xl text-cream/85 text-sm sm:text-lg">
+          <span className="sm:hidden">
+            Restauration d&apos;entreprise, collectivités et événements à Dakar.
+          </span>
+          <span className="hidden sm:inline">
+            Depuis plus de 20 ans, Thiam Traiteur accompagne entreprises,
+            administrations, écoles et organisations dans leurs besoins de
+            restauration quotidienne, tout en sublimant vos mariages,
+            anniversaires et événements avec des mets raffinés.
+          </span>
         </motion.p>
 
         <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mt-2">

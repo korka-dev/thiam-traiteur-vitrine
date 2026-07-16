@@ -11,8 +11,8 @@ const points = [
 
 export default function Tournesol() {
   return (
-    <section id="tournesol" className="bg-cream py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-10 items-center">
+    <section id="tournesol" className="bg-cream py-14 sm:py-28">
+      <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-6 sm:gap-10 items-center">
         <Reveal>
           <p className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm mb-3">
             NOTRE RESTAURANT
@@ -24,10 +24,10 @@ export default function Tournesol() {
             Tournesol est l&apos;établissement de restauration exploité par
             Thiam Traiteur au Point E, en face de la Piscine Olympique.
           </p>
-          <p className="text-navy/80 leading-relaxed mb-6">
+          <p className="text-navy/80 leading-relaxed mb-6 hidden sm:block">
             Ouvert au grand public, il propose :
           </p>
-          <ul className="space-y-3 mb-6">
+          <ul className="space-y-3 mb-6 hidden sm:block">
             {points.map((p) => (
               <li key={p} className="flex items-start gap-3 text-sm text-navy/80">
                 <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
@@ -35,7 +35,7 @@ export default function Tournesol() {
               </li>
             ))}
           </ul>
-          <p className="text-sm text-navy/60 italic">
+          <p className="text-sm text-navy/60 italic hidden sm:block">
             Tournesol bénéficie directement de l&apos;expertise et du
             savoir-faire développés par Thiam Traiteur depuis plus de deux
             décennies.

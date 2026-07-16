@@ -13,9 +13,9 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-navy text-cream py-20 sm:py-28">
+    <section className="bg-navy text-cream py-14 sm:py-28">
       <div className="mx-auto max-w-4xl px-6">
-        <Reveal className="text-center mb-14">
+        <Reveal className="text-center mb-8 sm:mb-14">
           <p className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm mb-3">
             POURQUOI NOUS CHOISIR
           </p>
@@ -25,9 +25,14 @@ export default function WhyChooseUs() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <ul className="grid sm:grid-cols-2 gap-4">
-            {reasons.map((r) => (
-              <li key={r} className="flex items-center gap-3 rounded-xl bg-cream/5 border border-gold/20 px-5 py-4">
+          <ul className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+            {reasons.map((r, i) => (
+              <li
+                key={r}
+                className={`flex items-center gap-3 rounded-xl bg-cream/5 border border-gold/20 px-5 py-4 ${
+                  i >= 4 ? "hidden sm:flex" : ""
+                }`}
+              >
                 <span className="shrink-0 w-6 h-6 rounded-full bg-gold text-navy flex items-center justify-center">
                   <CheckIcon className="w-3.5 h-3.5" />
                 </span>

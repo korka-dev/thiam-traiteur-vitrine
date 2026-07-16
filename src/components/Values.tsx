@@ -17,9 +17,9 @@ const values = [
 
 export default function Values() {
   return (
-    <section id="valeurs" className="bg-navy text-cream py-20 sm:py-28">
+    <section id="valeurs" className="bg-navy text-cream py-14 sm:py-28">
       <div className="mx-auto max-w-5xl px-6">
-        <Reveal className="text-center mb-16">
+        <Reveal className="text-center mb-8 sm:mb-16">
           <p className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm mb-3">
             NOTRE ENGAGEMENT
           </p>
@@ -28,7 +28,7 @@ export default function Values() {
           </h2>
         </Reveal>
 
-        <div className="grid sm:grid-cols-3 gap-10 text-center">
+        <div className="grid sm:grid-cols-3 gap-6 sm:gap-10 text-center">
           {values.map((v, i) => (
             <Reveal key={v.title} delay={i * 0.12} className="flex flex-col items-center">
               <span className="font-display text-gold text-sm mb-3">

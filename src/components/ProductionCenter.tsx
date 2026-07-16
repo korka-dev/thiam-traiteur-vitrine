@@ -11,8 +11,8 @@ const points = [
 
 export default function ProductionCenter() {
   return (
-    <section className="bg-navy text-cream py-20 sm:py-28 overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-10 items-center">
+    <section className="bg-navy text-cream py-14 sm:py-28 overflow-hidden">
+      <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-6 sm:gap-10 items-center">
         <Reveal className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
           <Image
             src={productionImage}
@@ -35,7 +35,7 @@ export default function ProductionCenter() {
             Thiam Traiteur dispose d&apos;une centrale de production dédiée à
             la préparation des repas.
           </p>
-          <ul className="space-y-3">
+          <ul className="space-y-3 hidden sm:block">
             {points.map((p) => (
               <li key={p} className="flex items-start gap-3 text-sm text-cream/90">
                 <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
