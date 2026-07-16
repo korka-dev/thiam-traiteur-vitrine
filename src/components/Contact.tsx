@@ -75,7 +75,7 @@ export default function Contact() {
               href="https://wa.me/221776041603"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-cream text-navy px-6 py-3 font-medium hover:bg-white transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-gold text-navy px-6 py-3 font-medium hover:bg-gold-light transition-colors"
             >
               Écrire sur WhatsApp
             </a>

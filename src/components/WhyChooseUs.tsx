@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
                   i >= 4 ? "hidden sm:flex" : ""
                 }`}
               >
-                <span className="shrink-0 w-6 h-6 rounded-full bg-cream text-navy flex items-center justify-center">
+                <span className="shrink-0 w-6 h-6 rounded-full bg-gold text-navy flex items-center justify-center">
                   <CheckIcon className="w-3.5 h-3.5" />
                 </span>
                 <span className="text-sm text-cream/90">{r}</span>

@@ -38,7 +38,7 @@ export default function Header() {
 
         <a
           href="tel:+221338435896"
-          className="hidden md:inline-flex items-center gap-2 rounded-full bg-navy text-cream px-5 py-2.5 text-sm font-medium hover:bg-white hover:text-navy transition-colors"
+          className="hidden md:inline-flex items-center gap-2 rounded-full bg-navy text-cream px-5 py-2.5 text-sm font-medium hover:bg-gold hover:text-navy transition-colors"
         >
           <PhoneIcon className="w-4 h-4" />
           33 843 58 96

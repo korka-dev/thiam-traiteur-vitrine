@@ -94,7 +94,7 @@ export default function Hero() {
         <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mt-2">
           <a
             href="tel:+221338435896"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-cream text-navy px-8 py-3.5 font-medium hover:bg-white hover:scale-105 transition-all"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gold text-navy px-8 py-3.5 font-medium hover:bg-gold-light hover:scale-105 transition-all"
           >
             <PhoneIcon className="w-4 h-4" />
             Appeler maintenant
