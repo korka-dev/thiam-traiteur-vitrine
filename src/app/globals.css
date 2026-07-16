@@ -3,9 +3,9 @@
 :root {
   --navy: #0d1b4c;
   --navy-dark: #081136;
-  --gold: #c9a44c;
-  --gold-light: #e2c785;
-  --cream: #fbf8f2;
+  --gold: #3d5fa8;
+  --gold-light: #6b8cc9;
+  --cream: #fafbfd;
 }
 
 @theme inline {
