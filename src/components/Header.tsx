@@ -13,6 +13,15 @@ const links = [
   { href: "#contact", label: "Contact" },
 ];
 
+// sections after Services are hidden on small screens, so the phone menu
+// only links to what's actually reachable there
+const mobileLinks = [
+  { href: "#accueil", label: "Accueil" },
+  { href: "#apropos", label: "À propos" },
+  { href: "#services", label: "Services" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -55,7 +64,7 @@ export default function Header() {
 
       {open && (
         <nav className="md:hidden bg-cream border-t border-gold/30 px-6 py-4 flex flex-col gap-4 font-display uppercase text-sm tracking-wide text-navy">
-          {links.map((l) => (
+          {mobileLinks.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-1">
               {l.label}
             </a>
