@@ -7,33 +7,18 @@ import { services } from "@/lib/images";
 
 export default function Services() {
   return (
-    <section id="services" className="bg-cream py-8 sm:py-28">
+    <section id="services" className="bg-cream py-14 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <Reveal className="text-center max-w-2xl mx-auto mb-5 sm:mb-16">
-          <p className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm mb-2 sm:mb-3">
-            NOS PRESTATIONS
+        <Reveal className="text-center max-w-2xl mx-auto mb-8 sm:mb-16">
+          <p className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm mb-3">
+            NOS PRESTATIONS ÉVÉNEMENTIELLES
           </p>
-          <h2 className="font-script text-3xl sm:text-6xl text-navy">
+          <h2 className="font-script text-5xl sm:text-6xl text-navy">
             Un traiteur pour chaque occasion
           </h2>
         </Reveal>
 
-        {/* Mobile: compact pill list, no images */}
-        <Reveal delay={0.05} className="sm:hidden">
-          <div className="grid grid-cols-2 gap-2">
-            {services.map((s) => (
-              <div
-                key={s.title}
-                className="rounded-xl border border-gold/30 bg-white/60 px-3 py-3 text-center"
-              >
-                <p className="font-display text-xs text-navy leading-tight">{s.title}</p>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-
-        {/* Desktop: full cards with photos */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.08}>
               <motion.div
@@ -41,7 +26,7 @@ export default function Services() {
                 transition={{ duration: 0.3 }}
                 className="group overflow-hidden rounded-2xl border border-gold/30 bg-white/60 hover:border-gold hover:shadow-xl hover:shadow-navy/10 transition-all h-full"
               >
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-24 sm:h-44 overflow-hidden">
                   <Image
                     src={s.image}
                     alt={s.title}
@@ -51,10 +36,10 @@ export default function Services() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent" />
                 </div>
-                <div className="p-7 text-center">
-                  <div className="mx-auto mb-4 h-px w-10 bg-gold" />
-                  <h3 className="font-display text-lg text-navy mb-2">{s.title}</h3>
-                  <p className="text-sm text-navy/70 leading-relaxed">{s.desc}</p>
+                <div className="p-3 sm:p-7 text-center">
+                  <div className="mx-auto mb-2 sm:mb-4 h-px w-10 bg-gold hidden sm:block" />
+                  <h3 className="font-display text-xs sm:text-lg text-navy mb-0 sm:mb-2 leading-tight">{s.title}</h3>
+                  <p className="text-sm text-navy/70 leading-relaxed hidden sm:block">{s.desc}</p>
                 </div>
               </motion.div>
             </Reveal>

@@ -20,14 +20,12 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
-        <div className="hidden sm:block">
-          <ProductionCenter />
-          <Tournesol />
-          <Values />
-          <Commitments />
-          <Gallery />
-          <WhyChooseUs />
-        </div>
+        <ProductionCenter />
+        <Tournesol />
+        <Values />
+        <Commitments />
+        <Gallery />
+        <WhyChooseUs />
         <Contact />
       </main>
       <Footer />

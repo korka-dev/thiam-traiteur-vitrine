@@ -3,23 +3,23 @@ import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-cream py-10 sm:py-28">
+    <section id="contact" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <Reveal className="text-center max-w-2xl mx-auto mb-6 sm:mb-16">
-          <p className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm mb-2 sm:mb-3">
+        <Reveal className="text-center max-w-2xl mx-auto mb-16">
+          <p className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm mb-3">
             CONTACT
           </p>
-          <h2 className="font-script text-3xl sm:text-6xl text-navy">
+          <h2 className="font-script text-5xl sm:text-6xl text-navy">
             Parlons de votre projet
           </h2>
-          <p className="text-navy/70 text-sm mt-2 sm:mt-4 hidden sm:block">
+          <p className="text-navy/70 text-sm mt-4">
             Demandez votre devis et découvrez nos solutions de restauration
             adaptées à votre organisation.
           </p>
         </Reveal>
 
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 items-stretch">
-          <Reveal className="rounded-2xl bg-navy text-cream p-5 sm:p-10 flex flex-col gap-4 sm:gap-8 justify-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+          <Reveal className="rounded-2xl bg-navy text-cream p-8 sm:p-10 flex flex-col gap-8 justify-center">
             <div className="flex items-start gap-4">
               <span className="shrink-0 w-11 h-11 rounded-full border border-gold flex items-center justify-center text-gold">
                 <PinIcon className="w-5 h-5" />
@@ -29,7 +29,7 @@ export default function Contact() {
                   Point E, Rue de Kaolack
                 </p>
                 <p className="text-cream/70 text-sm">Villa N°9 — Dakar</p>
-                <p className="text-cream/50 text-xs mt-1 hidden sm:block">
+                <p className="text-cream/50 text-xs mt-1">
                   Tournesol Restaurant : Point E, en face de la Piscine
                   Olympique
                 </p>
@@ -69,7 +69,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="divider-leaf text-gold hidden sm:flex" />
+            <div className="divider-leaf text-gold" />
 
             <a
               href="https://wa.me/221776041603"
@@ -81,7 +81,7 @@ export default function Contact() {
             </a>
           </Reveal>
 
-          <Reveal delay={0.15} className="rounded-2xl overflow-hidden border border-gold/30 min-h-[320px] hidden sm:block">
+          <Reveal delay={0.15} className="rounded-2xl overflow-hidden border border-gold/30 min-h-[320px]">
             <iframe
               title="Localisation Thiam Traiteur - Point E, Dakar"
               src="https://www.google.com/maps?q=Point+E,+Rue+de+Kaolack,+Dakar,+Senegal&output=embed"

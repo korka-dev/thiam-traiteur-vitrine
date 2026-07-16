@@ -2,19 +2,18 @@ import { LogoBadge } from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-dark text-cream/70 pt-8 sm:pt-16 pb-6 sm:pb-8">
-      <div className="mx-auto max-w-6xl px-6 flex flex-col items-center gap-4 sm:gap-8">
-        <LogoBadge width={110} className="sm:hidden" />
-        <LogoBadge width={150} className="hidden sm:inline-flex" />
+    <footer className="bg-navy-dark text-cream/70 pt-16 pb-8">
+      <div className="mx-auto max-w-6xl px-6 flex flex-col items-center gap-8">
+        <LogoBadge width={150} />
 
         <div className="divider-leaf text-gold w-full max-w-xs" />
 
-        <nav className="flex flex-wrap justify-center gap-x-6 sm:gap-x-8 gap-y-2 font-display text-xs tracking-[0.2em] uppercase">
+        <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 font-display text-xs tracking-[0.2em] uppercase">
           <a href="#accueil" className="hover:text-gold">Accueil</a>
           <a href="#apropos" className="hover:text-gold">À propos</a>
           <a href="#services" className="hover:text-gold">Services</a>
-          <a href="#tournesol" className="hover:text-gold hidden sm:inline">Tournesol</a>
-          <a href="#galerie" className="hover:text-gold hidden sm:inline">Galerie</a>
+          <a href="#tournesol" className="hover:text-gold">Tournesol</a>
+          <a href="#galerie" className="hover:text-gold">Galerie</a>
           <a href="#contact" className="hover:text-gold">Contact</a>
         </nav>
 
@@ -27,7 +26,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Thiam Traiteur. Tous droits réservés.
         </p>
 
-        <p className="text-xs text-cream/30 border-t border-cream/10 pt-4 sm:pt-6 w-full text-center">
+        <p className="text-xs text-cream/30 border-t border-cream/10 pt-6 w-full text-center">
           Site conçu et développé par{" "}
           <a
             href="https://www.groupegenetics.com/"
