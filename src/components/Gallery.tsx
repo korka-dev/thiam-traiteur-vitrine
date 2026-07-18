@@ -18,7 +18,7 @@ export default function Gallery() {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 items-start">
           {dishes.map((d, i) => (
             <Reveal
               key={d.name}
@@ -26,18 +26,23 @@ export default function Gallery() {
               className={i >= 4 ? "hidden sm:block" : ""}
             >
               <motion.div
-                whileHover={{ scale: 1.03 }}
-                transition={{ duration: 0.4 }}
-                className="group relative aspect-square overflow-hidden rounded-2xl bg-cream border border-gold/20"
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+                className="group overflow-hidden rounded-2xl border border-gold/20 hover:border-gold hover:shadow-xl hover:shadow-navy/15 transition-all"
               >
-                <Image
-                  src={d.image}
-                  alt={d.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 400px"
-                  className="object-contain transition-transform duration-700 group-hover:scale-105"
-                />
-                <p className="absolute bottom-2 sm:bottom-3 inset-x-0 text-center font-display text-navy text-xs sm:text-base tracking-wide px-2">
+                <div className="overflow-hidden">
+                  <motion.div whileHover={{ scale: 1.12 }} transition={{ duration: 0.5, ease: "easeOut" }}>
+                    <Image
+                      src={d.image}
+                      alt={d.name}
+                      width={d.width}
+                      height={d.height}
+                      sizes="(max-width: 768px) 50vw, 400px"
+                      className="w-full h-auto block"
+                    />
+                  </motion.div>
+                </div>
+                <p className="bg-white/70 py-2 sm:py-3 text-center font-display text-navy text-xs sm:text-base tracking-wide px-2">
                   {d.name}
                 </p>
               </motion.div>

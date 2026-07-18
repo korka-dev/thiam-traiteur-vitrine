@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 import { teamImage } from "@/lib/images";
 
@@ -43,14 +46,21 @@ export default function About() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.05} className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-10 sm:mb-14 bg-navy">
-          <Image
-            src={teamImage}
-            alt="L'équipe Thiam Traiteur"
-            fill
-            sizes="(max-width: 1024px) 100vw, 900px"
-            className="object-contain"
-          />
+        <Reveal delay={0.05} className="mb-10 sm:mb-14">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+            className="overflow-hidden rounded-2xl"
+          >
+            <Image
+              src={teamImage.src}
+              alt="L'équipe Thiam Traiteur"
+              width={teamImage.width}
+              height={teamImage.height}
+              sizes="(max-width: 1024px) 100vw, 900px"
+              className="w-full h-auto block"
+            />
+          </motion.div>
         </Reveal>
 
         <Reveal delay={0.1} className="grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto mb-10 sm:mb-16">

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 import { tournesolImage } from "@/lib/images";
 
@@ -42,14 +45,21 @@ export default function Tournesol() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.1} className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white border border-gold/20">
-          <Image
-            src={tournesolImage}
-            alt="Tournesol Restaurant, Point E, Dakar"
-            fill
-            sizes="(max-width: 1024px) 100vw, 600px"
-            className="object-contain"
-          />
+        <Reveal delay={0.1}>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+            className="overflow-hidden rounded-2xl border border-gold/20"
+          >
+            <Image
+              src={tournesolImage.src}
+              alt="Tournesol Restaurant, Point E, Dakar"
+              width={tournesolImage.width}
+              height={tournesolImage.height}
+              sizes="(max-width: 1024px) 100vw, 600px"
+              className="w-full h-auto block"
+            />
+          </motion.div>
         </Reveal>
       </div>
     </section>

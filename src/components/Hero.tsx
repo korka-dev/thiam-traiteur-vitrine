@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { LogoBadge } from "./Logo";
 import { PhoneIcon, WhatsAppIcon } from "./icons";
 import { heroImage } from "@/lib/images";
 
@@ -26,7 +25,7 @@ export default function Hero() {
   return (
     <section
       id="accueil"
-      className="relative overflow-hidden bg-navy text-cream"
+      className="relative overflow-hidden bg-black text-cream"
     >
       {/* background photo: fade + zoom entrance, then slow continuous ken-burns drift */}
       <motion.div
@@ -44,7 +43,7 @@ export default function Hero() {
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 2.2 }}
         >
           <Image
-            src={heroImage}
+            src={heroImage.src}
             alt="Plat gastronomique dressé par Thiam Traiteur"
             fill
             priority
@@ -52,7 +51,7 @@ export default function Hero() {
           />
         </motion.div>
       </motion.div>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/55 to-navy-dark/90" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-black/80" />
 
       <motion.div
         className="relative mx-auto max-w-5xl px-6 py-16 sm:py-32 flex flex-col items-center text-center gap-5 sm:gap-8"
@@ -60,14 +59,6 @@ export default function Hero() {
         initial="hidden"
         animate="show"
       >
-        <motion.div
-          variants={item}
-          animate={{ y: [0, -8, 0] }}
-          transition={{ y: { duration: 4, repeat: Infinity, ease: "easeInOut" } }}
-        >
-          <LogoBadge width={190} />
-        </motion.div>
-
         <motion.div variants={item} className="divider-leaf text-gold w-full max-w-xs" />
 
         <motion.p variants={item} className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm">
