@@ -18,7 +18,7 @@ export default function Gallery() {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 items-start">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {dishes.map((d, i) => (
             <Reveal
               key={d.name}
@@ -30,17 +30,14 @@ export default function Gallery() {
                 transition={{ duration: 0.3 }}
                 className="group overflow-hidden rounded-2xl border border-gold/20 hover:border-gold hover:shadow-xl hover:shadow-navy/15 transition-all"
               >
-                <div className="overflow-hidden">
-                  <motion.div whileHover={{ scale: 1.12 }} transition={{ duration: 0.5, ease: "easeOut" }}>
-                    <Image
-                      src={d.image}
-                      alt={d.name}
-                      width={d.width}
-                      height={d.height}
-                      sizes="(max-width: 768px) 50vw, 400px"
-                      className="w-full h-auto block"
-                    />
-                  </motion.div>
+                <div className="relative aspect-square overflow-hidden bg-cream">
+                  <Image
+                    src={d.image}
+                    alt={d.name}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 400px"
+                    className="object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
                 </div>
                 <p className="bg-white/70 py-2 sm:py-3 text-center font-display text-navy text-xs sm:text-base tracking-wide px-2">
                   {d.name}

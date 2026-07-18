@@ -18,25 +18,22 @@ export default function Services() {
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 items-start">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.08}>
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.3 }}
-                className="group overflow-hidden rounded-2xl border border-gold/30 bg-white/60 hover:border-gold hover:shadow-xl hover:shadow-navy/15 transition-all"
+                className="group overflow-hidden rounded-2xl border border-gold/30 bg-white/60 hover:border-gold hover:shadow-xl hover:shadow-navy/15 transition-all h-full"
               >
-                <div className="overflow-hidden">
-                  <motion.div whileHover={{ scale: 1.12 }} transition={{ duration: 0.5, ease: "easeOut" }}>
-                    <Image
-                      src={s.image}
-                      alt={s.title}
-                      width={s.width}
-                      height={s.height}
-                      sizes="(max-width: 768px) 50vw, 400px"
-                      className="w-full h-auto block"
-                    />
-                  </motion.div>
+                <div className="relative h-32 sm:h-48 overflow-hidden bg-cream">
+                  <Image
+                    src={s.image}
+                    alt={s.title}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 400px"
+                    className="object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
                 </div>
                 <div className="p-3 sm:p-7 text-center">
                   <div className="mx-auto mb-2 sm:mb-4 h-px w-10 bg-gold hidden sm:block" />

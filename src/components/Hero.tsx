@@ -61,10 +61,6 @@ export default function Hero() {
       >
         <motion.div variants={item} className="divider-leaf text-gold w-full max-w-xs" />
 
-        <motion.p variants={item} className="font-display tracking-[0.3em] text-gold text-xs sm:text-sm">
-          SAVEUR &nbsp;•&nbsp; QUALITÉ &nbsp;•&nbsp; EXCELLENCE
-        </motion.p>
-
         <motion.h1 variants={item} className="max-w-2xl font-display text-2xl sm:text-4xl leading-tight">
           L&apos;excellence de la restauration au service des entreprises et
           des collectivités
