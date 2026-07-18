@@ -26,15 +26,14 @@ export default function Services() {
                 transition={{ duration: 0.3 }}
                 className="group overflow-hidden rounded-2xl border border-gold/30 bg-white/60 hover:border-gold hover:shadow-xl hover:shadow-navy/10 transition-all h-full"
               >
-                <div className="relative h-24 sm:h-44 overflow-hidden">
+                <div className="relative h-24 sm:h-44 overflow-hidden bg-cream">
                   <Image
                     src={s.image}
                     alt={s.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-contain transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent" />
                 </div>
                 <div className="p-3 sm:p-7 text-center">
                   <div className="mx-auto mb-2 sm:mb-4 h-px w-10 bg-gold hidden sm:block" />

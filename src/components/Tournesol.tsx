@@ -42,13 +42,13 @@ export default function Tournesol() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.1} className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+        <Reveal delay={0.1} className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white border border-gold/20">
           <Image
             src={tournesolImage}
             alt="Tournesol Restaurant, Point E, Dakar"
             fill
             sizes="(max-width: 1024px) 100vw, 600px"
-            className="object-cover"
+            className="object-contain"
           />
         </Reveal>
       </div>

@@ -43,13 +43,13 @@ export default function About() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.05} className="relative aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden mb-10 sm:mb-14">
+        <Reveal delay={0.05} className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-10 sm:mb-14 bg-navy">
           <Image
             src={teamImage}
             alt="L'équipe Thiam Traiteur"
             fill
             sizes="(max-width: 1024px) 100vw, 900px"
-            className="object-cover"
+            className="object-contain"
           />
         </Reveal>
 

@@ -28,17 +28,16 @@ export default function Gallery() {
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.4 }}
-                className="group relative aspect-square overflow-hidden rounded-2xl"
+                className="group relative aspect-square overflow-hidden rounded-2xl bg-cream border border-gold/20"
               >
                 <Image
                   src={d.image}
                   alt={d.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.15]"
+                  className="object-contain transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent" />
-                <p className="absolute bottom-3 sm:bottom-5 inset-x-0 text-center font-display text-cream text-xs sm:text-base tracking-wide px-2">
+                <p className="absolute bottom-2 sm:bottom-3 inset-x-0 text-center font-display text-navy text-xs sm:text-base tracking-wide px-2">
                   {d.name}
                 </p>
               </motion.div>

@@ -13,13 +13,13 @@ export default function ProductionCenter() {
   return (
     <section className="bg-navy text-cream py-14 sm:py-28 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 grid lg:grid-cols-2 gap-6 sm:gap-10 items-center">
-        <Reveal className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+        <Reveal className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1 bg-navy-dark">
           <Image
             src={productionImage}
             alt="Centrale de production de Thiam Traiteur"
             fill
             sizes="(max-width: 1024px) 100vw, 600px"
-            className="object-cover"
+            className="object-contain"
           />
         </Reveal>
 
