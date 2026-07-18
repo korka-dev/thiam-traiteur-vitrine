@@ -26,7 +26,7 @@ export default function Services() {
                 transition={{ duration: 0.3 }}
                 className="group overflow-hidden rounded-2xl border border-gold/30 bg-white/60 hover:border-gold hover:shadow-xl hover:shadow-navy/15 transition-all h-full"
               >
-                <div className="relative h-32 sm:h-48 overflow-hidden bg-cream">
+                <div className="relative aspect-square overflow-hidden bg-cream">
                   <Image
                     src={s.image}
                     alt={s.title}

@@ -59,8 +59,6 @@ export default function Hero() {
         initial="hidden"
         animate="show"
       >
-        <motion.div variants={item} className="divider-leaf text-gold w-full max-w-xs" />
-
         <motion.h1 variants={item} className="max-w-2xl font-display text-2xl sm:text-4xl leading-tight">
           L&apos;excellence de la restauration au service des entreprises et
           des collectivités
