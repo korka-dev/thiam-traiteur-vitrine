@@ -87,33 +87,22 @@ export default function Hero() {
         initial="hidden"
         animate="show"
       >
-        <motion.div variants={item} className="contents">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col items-center gap-5 sm:gap-8"
-          >
-            <h1 className="max-w-2xl font-display text-2xl sm:text-4xl leading-tight">
-              L&apos;excellence de la restauration au service des entreprises
-              et des collectivités
-            </h1>
+        <motion.h1 variants={item} className="max-w-2xl font-display text-2xl sm:text-4xl leading-tight">
+          L&apos;excellence de la restauration au service des entreprises et
+          des collectivités
+        </motion.h1>
 
-            <p className="max-w-xl text-cream/85 text-sm sm:text-lg">
-              <span className="sm:hidden">
-                Restauration d&apos;entreprise, collectivités et événements à
-                Dakar.
-              </span>
-              <span className="hidden sm:inline">
-                Depuis plus de 20 ans, Thiam Traiteur accompagne entreprises,
-                administrations, écoles et organisations dans leurs besoins de
-                restauration quotidienne, tout en sublimant vos mariages,
-                anniversaires et événements avec des mets raffinés.
-              </span>
-            </p>
-          </motion.div>
-        </motion.div>
+        <motion.p variants={item} className="max-w-xl text-cream/85 text-sm sm:text-lg">
+          <span className="sm:hidden">
+            Restauration d&apos;entreprise, collectivités et événements à Dakar.
+          </span>
+          <span className="hidden sm:inline">
+            Depuis plus de 20 ans, Thiam Traiteur accompagne entreprises,
+            administrations, écoles et organisations dans leurs besoins de
+            restauration quotidienne, tout en sublimant vos mariages,
+            anniversaires et événements avec des mets raffinés.
+          </span>
+        </motion.p>
 
         <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 mt-2">
           <a
