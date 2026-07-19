@@ -1,8 +1,10 @@
-export const heroImage = {
-  src: "/images/canapes-roses.jpeg",
-  width: 1080,
-  height: 721,
-};
+export const heroImages = [
+  { src: "/images/canapes-roses.jpeg", width: 1080, height: 721 },
+  { src: "/images/poulet-grille.jpeg", width: 1080, height: 525 },
+  { src: "/images/patisseries-mariage.jpeg", width: 1080, height: 810 },
+  { src: "/images/plateau-cocktail.jpeg", width: 960, height: 720 },
+  { src: "/images/buffet-bouchees.jpeg", width: 810, height: 1080 },
+];
 
 export const teamImage = {
   src: "/images/equipe-thiam.jpeg",

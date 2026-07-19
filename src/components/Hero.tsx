@@ -1,9 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import { PhoneIcon, WhatsAppIcon } from "./icons";
-import { heroImage } from "@/lib/images";
+import { heroImages } from "@/lib/images";
 
 const container: Variants = {
   hidden: {},
@@ -21,37 +22,64 @@ const item: Variants = {
   },
 };
 
+const SLIDE_DURATION = 5500;
+
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % heroImages.length);
+    }, SLIDE_DURATION);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section
       id="accueil"
       className="relative overflow-hidden bg-black text-cream"
     >
-      {/* background photo: fade + zoom entrance, then slow continuous ken-burns drift */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ opacity: 0, scale: 1.3 }}
-        animate={{ opacity: 1, scale: 1.05 }}
-        transition={{
-          opacity: { duration: 1.4, ease: "easeOut" },
-          scale: { duration: 2.2, ease: [0.22, 1, 0.36, 1] },
-        }}
-      >
-        <motion.div
-          className="absolute inset-0"
-          animate={{ scale: [1, 1.08, 1] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 2.2 }}
-        >
-          <Image
-            src={heroImage.src}
-            alt="Plat gastronomique dressé par Thiam Traiteur"
-            fill
-            priority
-            className="object-cover"
-          />
-        </motion.div>
-      </motion.div>
+      {/* rotating background photos with crossfade + slow ken-burns zoom */}
+      <div className="absolute inset-0">
+        {heroImages.map((img, i) => (
+          <div
+            key={img.src}
+            className="absolute inset-0 transition-opacity duration-[1200ms] ease-in-out"
+            style={{ opacity: i === index ? 1 : 0, zIndex: i === index ? 1 : 0 }}
+          >
+            <div
+              className="absolute inset-0 transition-transform ease-linear"
+              style={{
+                transform: i === index ? "scale(1.1)" : "scale(1)",
+                transitionDuration: `${SLIDE_DURATION + 1200}ms`,
+              }}
+            >
+              <Image
+                src={img.src}
+                alt="Photo Thiam Traiteur"
+                fill
+                priority={i === 0}
+                className="object-cover"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-black/80" />
+
+      {/* slide indicators */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        {heroImages.map((img, i) => (
+          <button
+            key={img.src}
+            aria-label={`Photo ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className={`h-1.5 rounded-full transition-all ${
+              i === index ? "w-6 bg-gold" : "w-1.5 bg-cream/40"
+            }`}
+          />
+        ))}
+      </div>
 
       <motion.div
         className="relative mx-auto max-w-5xl px-6 py-16 sm:py-32 flex flex-col items-center text-center gap-5 sm:gap-8"
